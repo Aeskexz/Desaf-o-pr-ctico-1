@@ -1,0 +1,21 @@
+/* 
+   App.css Estilos globales de la aplicación
+   */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef0f8;
+  min-height: 100vh;
+  color: #333;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  padding: 20px;
+}

@@ -1,0 +1,110 @@
+/* 
+   Estilos del componente ContactList
+   */
+
+.contactlist-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.contactlist-titulo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/*  Formulario  */
+.contactlist-form {
+    background: #f8f9ff;
+    border: 1px solid #dde1f5;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.form-titulo {
+    font-size: 17px;
+    font-weight: 600;
+    color: #3a3a5c;
+    margin: 0 0 16px 0;
+}
+
+.form-fila {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 160px;
+}
+
+.form-grupo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.form-grupo input {
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-grupo input:focus {
+    border-color: #5c6bc0;
+    box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.15);
+}
+
+.form-error {
+    color: #c0392b;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+}
+
+.btn-agregar {
+    margin-top: 16px;
+    background: #5c6bc0;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-agregar:hover {
+    background: #3949ab;
+    transform: translateY(-1px);
+}
+
+/* Lista  */
+.contactlist-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-vacia {
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+    padding: 40px 0;
+}
+
+/* 
+   Ivan: Agregar estilos para:
+    El campo de búsqueda 
+    El contador de contactos 
+   */

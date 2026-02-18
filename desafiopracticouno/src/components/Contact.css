@@ -1,0 +1,110 @@
+/* Estilos del componente Contact*/
+
+.contact-card {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+}
+
+.contact-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tarjeta de contacto favorito */
+.contact-card.favorito {
+    border-color: #f5a623;
+    background: linear-gradient(135deg, #fffbf0, #fff8e1);
+    box-shadow: 0 2px 12px rgba(245, 166, 35, 0.25);
+}
+
+/* Badge de favorito */
+.badge-favorito {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: #f5a623;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Información del contacto */
+.contact-info {
+    flex: 1;
+}
+
+.contact-nombre {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+.contact-telefono {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Botones de acción */
+.contact-acciones {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-favorito,
+.btn-eliminar {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-favorito {
+    background: #f0f0f0;
+    color: #555;
+}
+
+.btn-favorito:hover {
+    background: #ffe082;
+    color: #b8860b;
+}
+
+.btn-favorito.activo {
+    background: #f5a623;
+    color: #fff;
+}
+
+.btn-favorito.activo:hover {
+    background: #e09400;
+}
+
+.btn-eliminar {
+    background: #fdecea;
+    color: #c0392b;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* 
+   ivan Agregale estilos para el botón "Editar"  y para el formulario de edición inline o modal
+*/
