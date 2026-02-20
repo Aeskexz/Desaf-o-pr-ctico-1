@@ -7,7 +7,6 @@
 
 import { useState } from 'react';
 import Contact from './Contact';
-import defaultAvatar from '../assets/avatars/default-avatar.svg';
 import './ContactList.css';
 
 function ContactList() {
@@ -33,9 +32,23 @@ function ContactList() {
     //   Estado para búsqueda de contactos
     const [busqueda, setBusqueda] = useState('');
 
-    //   cambios en el formulario 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+    
+
+    //  Permite que el campo teléfono acepte solo dígitos
+    const handleTelefonoChange = (e) => {
+        const digits = e.target.value.replace(/\D/g, '');
+        setForm({ ...form, telefono: digits });
+    };
+
+    //  Permite que los campos nombre y apellido acepten solo letras y espacios
+    const handleNombreChange = (e) => {
+        const cleaned = e.target.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, '');
+        setForm({ ...form, nombre: cleaned });
+    };
+
+    const handleApellidoChange = (e) => {
+        const cleaned = e.target.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, '');
+        setForm({ ...form, apellido: cleaned });
     };
 
     //   maneja la carga de foto (como base64)
@@ -137,8 +150,10 @@ function ContactList() {
                             type="text"
                             name="nombre"
                             placeholder="Ej: Juan"
+                            inputMode="text"
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]*"
                             value={form.nombre}
-                            onChange={handleChange}
+                            onChange={handleNombreChange}
                         />
                     </div>
 
@@ -149,8 +164,10 @@ function ContactList() {
                             type="text"
                             name="apellido"
                             placeholder="Ej: Pérez"
+                            inputMode="text"
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]*"
                             value={form.apellido}
-                            onChange={handleChange}
+                            onChange={handleApellidoChange}
                         />
                     </div>
 
@@ -160,9 +177,11 @@ function ContactList() {
                             id="telefono"
                             type="tel"
                             name="telefono"
-                            placeholder="Ej: 7890-1234"
+                            placeholder="Ej: 78901234"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
                             value={form.telefono}
-                            onChange={handleChange}
+                            onChange={handleTelefonoChange}
                         />
                     </div>
                 </div>
