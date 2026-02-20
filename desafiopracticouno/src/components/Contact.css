@@ -105,6 +105,147 @@
     transform: scale(1.05);
 }
 
-/* 
-   ivan Agregale estilos para el botón "Editar"  y para el formulario de edición inline o modal
-*/
+/* Botón editar */
+.btn-editar {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-editar:hover {
+    background: #45a049;
+    transform: translateY(-1px);
+}
+
+/* Formulario de edición inline */
+.contact-form-edicion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-grupo-edicion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-grupo-edicion label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.form-grupo-edicion input {
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-grupo-edicion input:focus {
+    border-color: #5c6bc0;
+    box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.15);
+}
+
+/* Botones de edición */
+.contact-acciones-edicion {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-guardar {
+    background: #4caf50;
+    color: #fff;
+}
+
+.btn-guardar:hover {
+    background: #45a049;
+}
+
+.btn-cancelar {
+    background: #f44336;
+    color: #fff;
+}
+
+.btn-cancelar:hover {
+    background: #da190b;
+}
+
+/* Foto del contacto - Vista normal */
+.contact-foto-container {
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.contact-foto {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-card:hover .contact-foto {
+    border-color: #5c6bc0;
+    transform: scale(1.05);
+}
+
+.contact-card.favorito .contact-foto {
+    border-color: #f5a623;
+}
+
+/* Foto en formulario de edición */
+.foto-edicion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.foto-edicion {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #5c6bc0;
+}
+
+.label-foto-edicion {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+}
+
+.input-archivo-edicion {
+    display: none;
+}
