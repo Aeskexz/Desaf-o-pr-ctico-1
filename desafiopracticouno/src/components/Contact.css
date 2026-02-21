@@ -1,251 +1,235 @@
-/* Estilos del componente Contact*/
-
+/* TARJETA PRINCIPAL */
 .contact-card {
-    background: #ffffff;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-    position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  position: relative;
 }
 
 .contact-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* Tarjeta de contacto favorito */
+/* FAVORITO */
 .contact-card.favorito {
-    border-color: #f5a623;
-    background: linear-gradient(135deg, #fffbf0, #fff8e1);
-    box-shadow: 0 2px 12px rgba(245, 166, 35, 0.25);
+  border: 1.5px solid #fbbf24;
+  background: #fffbeb;
 }
 
-/* Badge de favorito */
 .badge-favorito {
-    position: absolute;
-    top: -10px;
-    left: 16px;
-    background: #f5a623;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  background: #fbbf24;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
 }
 
-/* Información del contacto */
-.contact-info {
-    flex: 1;
-}
-
-.contact-nombre {
-    margin: 0 0 4px 0;
-    font-size: 17px;
-    font-weight: 600;
-    color: #222;
-}
-
-.contact-telefono {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
-
-/* Botones de acción */
-.contact-acciones {
-    display: flex;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-.btn-favorito,
-.btn-eliminar {
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.btn-favorito {
-    background: #f0f0f0;
-    color: #555;
-}
-
-.btn-favorito:hover {
-    background: #ffe082;
-    color: #b8860b;
-}
-
-.btn-favorito.activo {
-    background: #f5a623;
-    color: #fff;
-}
-
-.btn-favorito.activo:hover {
-    background: #e09400;
-}
-
-.btn-eliminar {
-    background: #fdecea;
-    color: #c0392b;
-}
-
-.btn-eliminar:hover {
-    background: #c0392b;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* Botón editar */
-.btn-editar {
-    background: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.btn-editar:hover {
-    background: #45a049;
-    transform: translateY(-1px);
-}
-
-/* Formulario de edición inline */
-.contact-form-edicion {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.form-grupo-edicion {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.form-grupo-edicion label {
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 4px;
-}
-
-.form-grupo-edicion input {
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    padding: 8px 10px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.form-grupo-edicion input:focus {
-    border-color: #5c6bc0;
-    box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.15);
-}
-
-/* Botones de edición */
-.contact-acciones-edicion {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.btn-guardar,
-.btn-cancelar {
-    flex: 1;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.btn-guardar {
-    background: #4caf50;
-    color: #fff;
-}
-
-.btn-guardar:hover {
-    background: #45a049;
-}
-
-.btn-cancelar {
-    background: #f44336;
-    color: #fff;
-}
-
-.btn-cancelar:hover {
-    background: #da190b;
-}
-
-/* Foto del contacto - Vista normal */
+/* FOTO */
 .contact-foto-container {
-    flex-shrink: 0;
-    margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .contact-foto {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
-    transition: border-color 0.2s, transform 0.2s;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #6c63ff;
+  transition: 0.3s ease;
 }
 
 .contact-card:hover .contact-foto {
-    border-color: #5c6bc0;
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.contact-card.favorito .contact-foto {
-    border-color: #f5a623;
+/* INFO */
+.contact-info {
+  flex: 1;
 }
 
-/* Foto en formulario de edición */
+.contact-nombre {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2d2d44;
+}
+
+.contact-telefono {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ACCIONES */
+.contact-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-acciones button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* FAVORITO */
+.btn-favorito {
+  background: #f3f4f6;
+}
+
+.btn-favorito.activo {
+  background: #fbbf24;
+  color: white;
+}
+
+.btn-favorito:hover {
+  background: #fde68a;
+}
+
+/* EDITAR */
+.btn-editar {
+  background: #6c63ff;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #5b52e0;
+}
+
+/* ELIMINAR */
+.btn-eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+}
+
+/* ===================== */
+/* MODO EDICIÓN MEJORADO */
+/* ===================== */
+
+.contact-form-edicion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOTO EDICIÓN */
 .foto-edicion-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    background: #f5f5f5;
-    border-radius: 8px;
-    margin-bottom: 8px;
+  text-align: center;
 }
 
 .foto-edicion {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #5c6bc0;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6c63ff;
+  margin-bottom: 6px;
 }
 
 .label-foto-edicion {
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-    cursor: pointer;
+  cursor: pointer;
+  color: #6c63ff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.label-foto-edicion:hover {
+  color: #4f46e5;
 }
 
 .input-archivo-edicion {
-    display: none;
+  display: none;
+}
+
+/* INPUTS EDICIÓN */
+.form-grupo-edicion {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grupo-edicion label {
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.form-grupo-edicion input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #e4e6f5;
+  font-size: 13.5px;
+  background: #fafbff;
+  transition: 0.2s ease;
+}
+
+.form-grupo-edicion input:focus {
+  border-color: #6c63ff;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+/* BOTONES EDICIÓN */
+.contact-acciones-edicion {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-guardar {
+  background: linear-gradient(135deg, #6c63ff, #5c6bc0);
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-guardar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(108, 99, 255, 0.25);
+}
+
+.btn-cancelar {
+  background: #e5e7eb;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-cancelar:hover {
+  background: #d1d5db;
 }
