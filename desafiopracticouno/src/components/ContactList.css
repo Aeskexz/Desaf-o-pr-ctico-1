@@ -193,3 +193,77 @@ body {
   font-size: 15px;
   color: #8d8d9f;
 }
+
+/* ============================= */
+/* BOTÓN TOGGLE MODO OSCURO */
+/* ============================= */
+
+.modo-toggle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modo-toggle button {
+  background: linear-gradient(135deg, #6c63ff, #5c6bc0);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.modo-toggle button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+/* ============================= */
+/* DARK MODE GLOBAL */
+/* ============================= */
+
+.dark-mode {
+  background: linear-gradient(135deg, #1a1c2e, #111322);
+  color: #e5e7ff;
+}
+
+/* Tarjeta formulario */
+.dark-mode .contactlist-form {
+  background: #1f2238;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Inputs */
+.dark-mode input {
+  background: #2a2d4a;
+  border-color: #3b3f63;
+  color: #e5e7ff;
+}
+
+.dark-mode input::placeholder {
+  color: #aaa;
+}
+
+/* Buscador */
+.dark-mode .busqueda-input {
+  background: #2a2d4a;
+  border-color: #3b3f63;
+  color: white;
+}
+
+/* Lista vacía */
+.dark-mode .lista-vacia {
+  color: #aaa;
+}
+
+/* Modal */
+.dark-mode .modal-confirmacion {
+  background: #1f2238;
+  color: white;
+}
+
+.dark-mode .btn-cancelar-modal {
+  background: #3b3f63;
+  color: white;
+}

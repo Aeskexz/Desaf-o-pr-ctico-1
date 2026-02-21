@@ -8,6 +8,7 @@
 import { useState } from 'react';
 import Contact from './Contact';
 import './ContactList.css';
+import {  useEffect } from 'react';
 
 function ContactList() {
     //   lista de contactos
@@ -17,6 +18,9 @@ function ContactList() {
         { id: 2, nombre: 'Carlos', apellido: 'López', telefono: '7654-3210', favorito: false, foto: null },
         { id: 3, nombre: 'Ana', apellido: 'Martínez', telefono: '7321-9876', favorito: false, foto: null },
     ]);
+
+    const [modoOscuro, setModoOscuro] = useState(false);
+    
 
     //  Estado: campos del formulario 
     const [form, setForm] = useState({
@@ -130,6 +134,14 @@ function ContactList() {
     const totalContactos = contactos.length;
     const totalFavoritos = contactos.filter((c) => c.favorito).length;
 
+    useEffect(() => {
+  if (modoOscuro) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+}, [modoOscuro]);
+
     // Render
     return (
         <div className="contactlist-container">
@@ -241,6 +253,12 @@ function ContactList() {
                     ))
                 )}
             </div>
+
+            <div className="modo-toggle">
+         <button onClick={() => setModoOscuro(!modoOscuro)}>
+        {modoOscuro ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
+        </button>
+</div>
 
 
         </div>
