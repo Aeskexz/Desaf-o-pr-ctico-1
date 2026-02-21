@@ -200,13 +200,21 @@ function ContactList() {
 
                 <div className="form-grupo-foto">
                     <label htmlFor="foto">📷 Foto de perfil</label>
-                    <input
-                        id="foto"
-                        type="file"
-                        accept="image/*"
-                        onChange={handleFotoChange}
-                        className="input-archivo"
-                    />
+                    <div className="archivo-container">
+                        <input
+                            id="foto"
+                            type="file"
+                            accept="image/*"
+                            onChange={handleFotoChange}
+                            className="input-archivo-hidden"
+                        />
+                        <label htmlFor="foto" className="btn-seleccionar-archivo">
+                            {form.foto ? '✓ Archivo seleccionado' : 'Seleccionar archivo'}
+                        </label>
+                        {!form.foto && (
+                            <p className="texto-sin-archivo">Ningún archivo seleccionado</p>
+                        )}
+                    </div>
                     {form.foto && (
                         <div className="preview-foto">
                             <img src={form.foto} alt="Preview" className="img-preview" />
