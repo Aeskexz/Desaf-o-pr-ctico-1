@@ -31,7 +31,7 @@ body {
 }
 
 /* ============================= */
-/* TARJETA FORMULARIO PREMIUM   */
+/* TARJETA FORMULARIO */
 /* ============================= */
 
 .contactlist-form {
@@ -97,20 +97,45 @@ body {
   margin-top: 18px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.archivo-container {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.input-archivo {
-  padding: 12px;
-  border: 2px dashed #6c63ff;
-  border-radius: 12px;
-  background: #f4f6ff;
-  cursor: pointer;
-  transition: 0.2s ease;
+.input-archivo-hidden {
+  display: none;
 }
 
-.input-archivo:hover {
-  background: #e9ecff;
+.btn-seleccionar-archivo {
+  display: inline-block;
+  padding: 14px 20px;
+  border: 2px solid #6c63ff;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6c63ff, #5c6bc0);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.btn-seleccionar-archivo:hover {
+  background: linear-gradient(135deg, #5c54e8, #4d5aad);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+.texto-sin-archivo {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .preview-foto {
